@@ -3,7 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Joyride from 'react-joyride';
-import { EVENTS } from 'react-joyride/es/constants';
+import { EVENTS } from 'react-joyride';
 
 // Internals (A-z);
 import DayInsights from 'clearminute/_patterns/organisms/day-insights/Component';
@@ -149,8 +149,8 @@ class Overview extends React.Component {
               <div className="u-card" style={{ marginBottom: '30px' }}>
                 <h3 className="u-card__header">Missing daily report</h3>
                 <p>
-                  Seems like, your extension was not running on
-                  that day and did not record any time.
+                  Seems like, your extension was not running on that day and did not record any
+                  time.
                 </p>
               </div>
             )}

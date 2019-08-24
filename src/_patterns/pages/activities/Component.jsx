@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import ReactTooltip from 'react-tooltip';
 import InlineSVG from 'react-inlinesvg';
 import Joyride from 'react-joyride';
-import { EVENTS } from 'react-joyride/es/constants';
+// import { EVENTS } from 'react-joyride';
 import { map, take, find } from 'lodash';
 
 // Internals (A-z)
@@ -17,7 +17,6 @@ import TopBarContainer from 'clearminute/_patterns/molecules/top-bar/Container';
 import Switch from 'clearminute/_patterns/atoms/switch/Component';
 import helpIcon from 'clearminute/styles/svg/help-icon.svg';
 import getUrlParams from 'clearminute/common/utils/getUrlParams';
-
 
 class Activities extends React.Component {
   constructor(props) {
@@ -37,7 +36,8 @@ class Activities extends React.Component {
       steps: [
         {
           target: '.weird-joyride-anchor',
-          content: 'Here is a list of all your activities, they are sorted by the amount of time you spent.',
+          content:
+            'Here is a list of all your activities, they are sorted by the amount of time you spent.',
           placement: 'center',
         },
         {
@@ -49,7 +49,8 @@ class Activities extends React.Component {
         },
         {
           target: '.activity-productivity-switcher',
-          content: 'Use the control buttons to customize the productivity level of your activities.',
+          content:
+            'Use the control buttons to customize the productivity level of your activities.',
           placement: 'bottom',
         },
         {
@@ -60,17 +61,16 @@ class Activities extends React.Component {
       ],
     };
 
-
     this.toggleEditModal = this.toggleEditModal.bind(this);
     this.setEditActivityId = this.setEditActivityId.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
   }
 
   componentDidMount() {
-    const { completedActivitiesWalkthrough } = this.props;
-    if (!completedActivitiesWalkthrough) {
-      this.setState({ run: true });
-    }
+    // const { completedActivitiesWalkthrough } = this.props;
+    // if (!this.props.completedActivitiesWalkthrough) {
+    //   this.setState({ run: true });
+    // }
     // Note: This is meant for new users that just install the app and don't have any activities and switch screens
     // for heavy users that's not use case because newer activities will appear on bottom and wont be visible
     // TODO: Optimize
@@ -84,13 +84,13 @@ class Activities extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (
-      prevProps.completedActivitiesWalkthrough === true &&
-      this.props.completedActivitiesWalkthrough === false &&
-      this.state.run !== true
-    ) {
-      this.setState({ run: true });
-    }
+    // if (
+    //   prevProps.completedActivitiesWalkthrough === true &&
+    //   this.props.completedActivitiesWalkthrough === false &&
+    //   this.state.run !== true
+    // ) {
+    //   this.setState({ run: true });
+    // }
   }
 
   componentWillUnmount() {
@@ -116,9 +116,9 @@ class Activities extends React.Component {
   }
 
   walkthroughCallback(tour) {
-    if (tour.type === EVENTS.TOUR_END) {
-      this.props.completeActivitiesWalkthroughActionAsync();
-    }
+    // if (tour.type === EVENTS.TOUR_END) {
+    //   this.props.completeActivitiesWalkthroughActionAsync();
+    // }
   }
 
   render() {
@@ -128,14 +128,10 @@ class Activities extends React.Component {
       showMoreActivitiesAction,
       toggleAlwaysactiveActivityAsync,
       toggleDisableInFocusActivityAsync,
-      completedActivitiesWalkthrough,
+      // completedActivitiesWalkthrough,
     } = this.props;
 
-    const {
-      editModalOpen,
-      editActivityId,
-      showFocusConfigurationHelp,
-    } = this.state;
+    const { editModalOpen, editActivityId, showFocusConfigurationHelp } = this.state;
 
     const editActivity = find(activities, activity => activity.activityId === editActivityId);
     const shownActivities = take(activities, numberOfActivitiesToShow);
@@ -178,7 +174,10 @@ class Activities extends React.Component {
           TopBarDropdown={ActivityTypeDropdown}
         />
         <div className="u-center-vh">
-          <div className="weird-joyride-anchor" style={{ width: 0, height: 0, marginTop: '10px' }}/>
+          <div
+            className="weird-joyride-anchor"
+            style={{ width: 0, height: 0, marginTop: '10px' }}
+          />
         </div>
         <div className="u-scroll-container">
           <div className="activities u-content-container">
@@ -214,20 +213,19 @@ class Activities extends React.Component {
                 <h3 className="u-card__header">TOTAL</h3>
               </div>
               <div className="activities__content__list">
-                {map(shownActivities, (activity, index) =>
-                  (
-                    <ActivityContainer
-                      className={index % 2
+                {map(shownActivities, (activity, index) => (
+                  <ActivityContainer
+                    className={
+                      index % 2
                         ? 'activities__content__list__item--even'
                         : 'activities__content__list__item--odd'
-                      }
-                      forceShowControlButtons={index === 0 && !completedActivitiesWalkthrough}
-                      key={activity.activityId}
-                      activity={activity}
-                      setEditActivityId={this.setEditActivityId}
-                    />
-                  ),
-                )}
+                    }
+                    forceShowControlButtons={index === 0 /* && !completedActivitiesWalkthrough */}
+                    key={activity.activityId}
+                    activity={activity}
+                    setEditActivityId={this.setEditActivityId}
+                  />
+                ))}
               </div>
               {numberOfActivitiesToShow < activities.length && (
                 <div className="activities__content__show-more">
@@ -239,17 +237,14 @@ class Activities extends React.Component {
             </div>
           </div>
         </div>
-        <Modal
-          open={editModalOpen}
-          onCloseRequest={this.toggleEditModal}
-          title={modalTitle}
-        >
+        <Modal open={editModalOpen} onCloseRequest={this.toggleEditModal} title={modalTitle}>
           <div style={{ display: 'flex', flexDirection: 'column' }}>
-            {editActivity &&
+            {editActivity && (
               <div className="edit-modal__content">
                 <div className="edit-modal__content__row">
                   <div className="edit-modal__content__row__title">
-                    Track Idle <span
+                    Track Idle{' '}
+                    <span
                       data-multiline={true}
                       data-tip={`If clearminute detects that the user is idle, it stops
                       tracking time.  <br /> If you enable this option, tracking time for ${editActivity.title} <br />
@@ -271,7 +266,8 @@ class Activities extends React.Component {
                 </div>
                 <div className="edit-modal__content__row">
                   <div className="edit-modal__content__row__title">
-                    Block in Focus Mode <span
+                    Block in Focus Mode{' '}
+                    <span
                       data-multiline={true}
                       data-tip={`If enabled, it will prevent opening ${editActivity.title}
                       in focus mode. <br />
@@ -297,13 +293,9 @@ class Activities extends React.Component {
                   </p>
                 )}
               </div>
-            }
+            )}
             <div className="u-spacer-20" />
-            <Button
-              label="Close"
-              inverted={true}
-              onClick={this.toggleEditModal}
-            />
+            <Button label="Close" inverted={true} onClick={this.toggleEditModal} />
           </div>
         </Modal>
       </div>
@@ -312,10 +304,11 @@ class Activities extends React.Component {
 }
 
 Activities.propTypes = {
-  activities: PropTypes.arrayOf(PropTypes.shape({
-    activityId: PropTypes.string.isRequired,
-  })),
-  completedActivitiesWalkthrough: PropTypes.bool.isRequired,
+  activities: PropTypes.arrayOf(
+    PropTypes.shape({
+      activityId: PropTypes.string.isRequired,
+    }),
+  ),
   activeActivityTypeId: PropTypes.string.isRequired,
   numberOfActivitiesToShow: PropTypes.number.isRequired,
   loadActivitiesActionsAsync: PropTypes.func.isRequired,
@@ -323,7 +316,7 @@ Activities.propTypes = {
   resetActivitiesFiltersAction: PropTypes.func.isRequired,
   toggleAlwaysactiveActivityAsync: PropTypes.func.isRequired,
   toggleDisableInFocusActivityAsync: PropTypes.func.isRequired,
-  completeActivitiesWalkthroughActionAsync: PropTypes.func.isRequired,
+  // completeActivitiesWalkthroughActionAsync: PropTypes.func.isRequired,
   setActiveActivityTypeId: PropTypes.func.isRequired,
 };
 
