@@ -46,20 +46,6 @@
   &:hover:not(&--selected) {
     opacity: 0.8;
   }
-
-  &:last-child {
-    height: 50px;
-    flex-direction: row;
-    margin-top: auto;
-    .navigation__item__icon {
-      margin: 0;
-      margin-right: 5px;
-    }
-
-    .navigation__item__title {
-      padding-bottom: 3px;
-    }
-  }
 }
 
 .navigation__item__icon {
