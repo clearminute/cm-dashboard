@@ -1,8 +1,8 @@
-# Ignore everything by default
-*
+# Logs
+*.log
 
-# Allow files explicitly
-!build/
-!build/*
-!.gcloudignore
-!app.yaml
+# Dependency directory
+node_modules
+
+# IDE
+.vscode/
