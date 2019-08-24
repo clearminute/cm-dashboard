@@ -1,0 +1,26 @@
+.activity-type-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 5px;
+  line-height: 0;
+
+  &--productive {
+    background-color: $productive-color;
+  }
+
+  &--distracting {
+    background-color: $distracting-color;
+  }
+
+  &--neutral {
+    background-color: $steel;
+  }
+
+  &--slightlyProductive {
+    background-color: $slightly-productive-color;
+  }
+
+  &--slightlyDistracting {
+    background-color: $slightly-distracting-color;
+  }
+}

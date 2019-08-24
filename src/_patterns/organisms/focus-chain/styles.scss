@@ -1,0 +1,27 @@
+.focus__chain rect {
+  shape-rendering: crispedges;
+  cursor: pointer;
+}
+
+.focus__chain__text {
+  font-size: 12px;
+  fill: $slate;
+  ;
+}
+
+.focus__chain__header {
+  margin-bottom: 25px;
+}
+
+.focuschain__heart {
+  color: $dark-sky-blue;
+
+  & svg path {
+    fill: $dark-sky-blue;
+  }
+
+}
+
+.focus__chain__description {
+  color: $steel;
+}

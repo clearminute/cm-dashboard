@@ -1,0 +1,103 @@
+.hourly-chart {
+  padding-top: 60px;
+}
+
+.hourly-chart__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hourly-chart__navigation {
+  padding: 10px 5px;
+  cursor: pointer;
+  svg path {
+    fill: $steel;
+  }
+}
+
+.hourly-chart__navigation--inactive {
+  cursor: default;
+  svg path {
+    fill: $pale-grey;
+  }
+}
+
+.hourly-chart__navigation--left {
+  margin-right: 20px;
+}
+
+.hourly-chart__navigation--right {
+  margin-left: 20px;
+}
+
+.hourly-chart__bar-chart {
+  z-index: 0;
+  height: 140px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.hourly-chart__bar-chart__stripes {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  span {
+    z-index: -1;
+    width: 100%;
+    height: 3px;
+    background-color: $pale-grey;
+  }
+}
+
+
+.hourly-chart:empty {
+  margin: 0 auto;
+  width: 430px;
+  height: 140px;
+
+  background-image:
+    linear-gradient( 100deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 80% ),
+    linear-gradient( $pale-grey 400px, transparent 0 ),
+    linear-gradient( $pale-grey 400px, transparent 0 ),
+    linear-gradient( $pale-grey 400px, transparent 0 ),
+    linear-gradient( $pale-grey 400px, transparent 0 ),
+    linear-gradient( $pale-grey 400px, transparent 0 ),
+    linear-gradient( $pale-grey 400px, transparent 0 ),
+    linear-gradient( $pale-grey 400px, transparent 0 ),
+    linear-gradient( $pale-grey 400px, transparent 0 );
+
+  background-repeat: no-repeat;
+
+  background-size:
+    600px 10px, /* highlight */
+    45px 200px,
+    45px 200px,
+    45px 200px,
+    45px 200px,
+    45px 200px,
+    45px 200px,
+    45px 200px,
+    45px 200px;
+
+  background-position:
+    0 100%, /* highlight */
+    0 20px,
+    55px 40px,
+    110px 80px,
+    165px 60px,
+    220px 30px,
+    275px 70px,
+    330px 50px,
+    385px 50px;
+
+  animation: shine-chart-bars-daily 1s infinite;
+}

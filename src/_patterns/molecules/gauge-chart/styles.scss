@@ -1,0 +1,39 @@
+.gauge-chart {
+  align-items: center;
+  display: flex;
+  height: 200px;
+  justify-content: center;
+}
+
+.gauge-chart__svg {
+  overflow: visible !important;
+}
+
+.gauge-chart__path {
+  stroke-width: 20;
+  fill: none;
+}
+
+.gauge-chart__info {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.gauge-chart__info__percentage {
+  font-size: 28px;
+  margin: 30px 0 0 0;
+  color: $charcoal-grey;
+}
+
+.gauge-chart__info__totalTime {
+  font-size: 18px;
+  margin: 0;
+  color: $steel;
+}
+
+.percentage-sign {
+  font-family: Arial, Helvetica, sans-serif;
+}

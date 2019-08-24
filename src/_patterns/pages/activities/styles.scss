@@ -1,0 +1,68 @@
+.activities__content__header {
+  display: flex;
+}
+
+.activities__content__header :nth-child(1) {
+  min-width: 250px;
+  flex: 1 0 auto;
+}
+
+.activities__content__header :nth-child(2) {
+  margin-right: 50px;
+}
+
+.activities__content__header :nth-child(3) {
+  width: 50px;
+}
+
+.activities__content__list {
+  margin-top: 25px;
+}
+
+.activities__content__list__item--even {
+  background-color: #F5F6FA;
+}
+
+.activities__content__show-more {
+  text-align: center;
+  padding: 30px;
+}
+
+.edit-modal__content {
+  width: 400px;
+}
+
+.edit-modal__content__row {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.edit-modal__content__row__title {
+  flex: 1 0 auto;
+}
+
+.edit-modal__content__row__help-button {
+  display: inline;
+  svg {
+    height: 18px;
+  }
+}
+
+.edit-modal__content__row__action {
+  width: 50px;
+}
+
+.activities__switch {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: $steel;
+  font-size: 12px;
+}
+
+.activities__switch__text {
+  margin-right: 12px;
+  text-transform: uppercase;
+}

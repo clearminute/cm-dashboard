@@ -1,0 +1,37 @@
+.support-button {
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 210px;
+  font-size: 14px;
+  border: none;
+  text-transform: uppercase;
+  background-color: $dark-sky-blue;
+  color: white;
+  padding: 0 15px 0 15px;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+
+  &:hover {
+    color: $dark-sky-blue;
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+
+    > .support-button__icon {
+      svg {
+        stroke: $dark-sky-blue;
+        fill: none;
+      }
+    }
+  }
+}
+
+.support-button__icon {
+  width: 25px;
+  padding-left: 7px;
+  padding-top: 3px;
+}

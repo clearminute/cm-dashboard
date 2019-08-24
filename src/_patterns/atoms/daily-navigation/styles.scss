@@ -1,0 +1,43 @@
+.daily-navigation {
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+}
+
+.daily-navigation__arrow {
+  cursor: pointer;
+  
+  svg path {
+    fill: $link-water;
+  }
+
+  &--left {
+    margin-right: 20px;
+  }
+
+  &--right {
+    margin-left: 20px;
+  }
+
+  &:hover:not(&--inactive) {
+    svg path {
+      fill: $dark-sky-blue;
+    }
+  }
+
+  &--inactive {
+    cursor: default;
+    svg path {
+      fill: $pale-grey;
+    }
+  }
+}
+
+.daily-navigation__day {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  cursor: pointer;
+  color: $dark-sky-blue;
+}

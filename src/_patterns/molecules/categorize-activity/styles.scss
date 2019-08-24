@@ -1,0 +1,16 @@
+.categorize-activity__description {
+  color: $steel;
+  font-size: 16px;
+}
+
+.categorize-activity__categorization {
+  height: 120px;
+  text-align: center;
+
+  & h4 {
+    color: $steel;
+    font-weight: 500;
+    margin-bottom: 55px;
+    margin-top: 55px;
+  }
+}

@@ -1,0 +1,30 @@
+
+.categorize-activity__button {
+  margin: 0 5px;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 0px;
+  height: 30px;
+  width: 30px;
+
+  &--productive {
+    background-color: $productive-color;
+  }
+
+  &--distracting {
+    background-color: $distracting-color;
+  }
+
+  &--neutral {
+    background-color: $neutral-color-light;
+  }
+
+  &--slightlyProductive {
+    background-color: $slightly-productive-color;
+  }
+
+  &--slightlyDistracting {
+    background-color: $slightly-distracting-color;
+  }
+}

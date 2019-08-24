@@ -1,0 +1,83 @@
+.navigation {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: $charcoal-grey;
+  width: $navigation-width;
+  user-select: none;
+}
+
+.navigation__logo {
+  position: relative;
+  width: 150px;
+  height: 130px;
+}
+
+.navigation__app-version {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: $navigation-width;
+  text-align: center;
+  color: white;
+  font-family: Montserrat;
+}
+
+
+.navigation__item {
+  height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: $pale-grey;
+  opacity: 0.5;
+  cursor: pointer;
+
+  &--selected {
+    background-color: $dark-charcoal-grey;
+    color: white;
+    opacity: 1;
+  }
+
+  &:hover:not(&--selected) {
+    opacity: 0.8;
+  }
+
+  &:last-child {
+    height: 50px;
+    flex-direction: row;
+    margin-top: auto;
+    .navigation__item__icon {
+      margin: 0;
+      margin-right: 5px;
+    }
+
+    .navigation__item__title {
+      padding-bottom: 3px;
+    }
+  }
+}
+
+.navigation__item__icon {
+  margin-bottom: 12px;
+
+  svg path {
+    fill: $pale-grey;
+  }
+
+  &--selected {
+    svg path {
+      fill: white;
+    }
+  }
+}
+
+.navigation__item__title {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}

@@ -1,0 +1,10 @@
+@import 'bar/styles.scss';
+
+.daybar {
+  opacity: 0.6;
+}
+
+.daybar--selected {
+  font-weight: 700;
+  opacity: 1.0;
+}

@@ -1,0 +1,31 @@
+// global styles
+@import 'normalize';
+@import 'fonts';
+@import 'keyframes';
+@import 'variables';
+@import 'colors';
+@import 'utils';
+
+// Atoms, Molecules, Pages styles
+@import '../_patterns/atoms/atoms';
+@import '../_patterns/molecules/molecules';
+@import '../_patterns/organisms/organisms';
+@import '../_patterns/pages/pages';
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#activity,
+div[data-reactroot] {
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}

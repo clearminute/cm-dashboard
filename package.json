@@ -1,0 +1,77 @@
+{
+  "name": "cm-dashboard",
+  "version": "0.7.0",
+  "scripts": {
+    "build": "yarn install && export NODE_ENV=production && webpack -p",
+    "dev": "export NODE_ENV=development && webpack-dev-server --inline",
+    "test": "jest",
+    "debug": "node --inspect --debug-brk ./node_modules/.bin/jest --runInBand --env jest-environment-node-debug",
+    "lint-fix": "eslint --fix './src/**/*.js' './src/**/*.jsx'"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^clearminute(.*)$": "<rootDir>/src$1"
+    },
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/__data__/"
+    ]
+  },
+  "author": "clearminute",
+  "dependencies": {
+    "lodash": "4.17.10",
+    "prop-types": "15.6.0",
+    "react": "^16.7.0-alpha.2",
+    "react-dom": "16.7.0-alpha.2",
+    "react-inlinesvg": "0.7.5",
+    "react-joyride": "^2.0.0-15",
+    "react-redux": "5.0.7",
+    "react-router": "3.2.0",
+    "react-tooltip": "3.6.0",
+    "redux": "4.0.0",
+    "redux-thunk": "2.3.0",
+    "whatwg-fetch": "2.0.3"
+  },
+  "devDependencies": {
+    "babel-core": "6.23.1",
+    "babel-eslint": "7.2.3",
+    "babel-jest": "19.0.0",
+    "babel-loader": "7.1.1",
+    "babel-plugin-transform-object-rest-spread": "6.23.0",
+    "babel-plugin-transform-react-display-name": "6.23.0",
+    "babel-plugin-transform-react-jsx-self": "6.22.0",
+    "babel-plugin-transform-react-jsx-source": "6.22.0",
+    "babel-plugin-transform-strict-mode": "6.22.0",
+    "babel-polyfill": "6.23.0",
+    "babel-preset-env": "1.6.0",
+    "babel-preset-react": "6.23.0",
+    "babel-preset-react-optimize": "1.0.1",
+    "css-loader": "0.26.4",
+    "eslint": "4.3.0",
+    "eslint-config-airbnb-base": "11.3.1",
+    "eslint-import-resolver-webpack": "0.8.3",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-import": "2.7.0",
+    "eslint-plugin-react": "7.1.0",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^2.3.0",
+    "jest": "19.0.2",
+    "jest-environment-node-debug": "2.0.0",
+    "json-loader": "0.5.4",
+    "prettier": "^1.17.1",
+    "pretty-quick": "^1.11.0",
+    "react-addons-test-utils": "15.4.2",
+    "node-sass": "^4.12.0",
+    "sass-loader": "6.0.3",
+    "style-loader": "0.13.2",
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}

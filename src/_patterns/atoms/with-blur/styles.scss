@@ -1,0 +1,11 @@
+.with-blur__blur {
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='2');
+    -webkit-filter: url(#blur-filter);
+    filter: url(#blur-filter);
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+    display: inherit;
+}
+.with-blur__blur-svg {
+    display: none;
+}

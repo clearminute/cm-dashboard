@@ -1,0 +1,45 @@
+@import 'activity-settings-button/styles';
+@import 'activity-productivity-switcher/styles';
+@import 'activity-type-icon/styles';
+
+.activity {
+  height: 45px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: $slate;
+}
+
+.activity__content {
+  display: flex;
+  align-items: center;
+}
+
+.activity__content__icon {
+  flex: 45px;
+}
+
+.activity__content__title {
+  width: 175px; // acts as min-width to which flex can shrink
+  margin-left: 10px;
+  line-height: 30px;
+  margin-right: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.activity__content__keyboard {
+  width: 35px;
+  margin-left: -100px;
+  flex: 1 0 auto;
+}
+
+.activity__content__productivity {
+  width: 205px;
+  text-transform: capitalize;
+}
+
+.activity__content__settings {
+  width: 45px;
+}

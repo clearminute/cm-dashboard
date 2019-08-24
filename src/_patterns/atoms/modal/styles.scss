@@ -1,0 +1,61 @@
+.modal {
+  display: none;
+  z-index: 5000;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: $cadet;
+
+  &--open {
+    display: block;
+  }
+
+  &--opaque {
+    background-color: #f3f5f7;
+  }
+}
+
+.modal__container {
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 20px 60px 0 rgba(31,75,120,.11);
+  border: solid 2px #F0F0F8;
+  display: inline-block;
+  margin-top: 15vh;
+  padding: 15px 30px;
+  font-size: 18px;
+  &--small {
+    max-width: 400px;
+  }
+}
+
+.modal__header {
+  display: flex;
+  align-items: center;
+  margin-right: -5px; /* fix weird ass extra padding of close icon */
+}
+
+.modal__header__title {
+  flex: 1 0 auto;
+  text-align: left;
+  padding-right: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.modal__header__close {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+
+.modal__content {
+  white-space: normal;
+  text-align: left;
+  line-height: 26px;
+  margin: $margin-l 0;
+}

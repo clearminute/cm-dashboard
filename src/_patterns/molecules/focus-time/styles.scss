@@ -1,0 +1,86 @@
+.focus-time {
+  color: $slate;
+}
+
+.focus-time__content {
+  position: relative;
+}
+
+.focus-time__content__item {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+
+  & p {
+    margin-bottom: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 15px;
+  }
+
+  &:first-of-type {
+    & p {
+      margin-top: 0;
+    }
+  }
+}
+
+.focus-time__totalTime {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  padding-top: 0;
+  border-top: 2px solid $link-water;
+
+  & p {
+    margin-top: 10px;
+  }
+}
+
+
+.focus-time__help-icon-wrapper {
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  svg {
+    height: 20px;
+  }
+}
+
+.focus-time__start-minutes {
+  position: absolute;
+  bottom: 20px;
+  left: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  color: $charcoal-grey;
+}
+
+.focus-time__end-minutes {
+  position: absolute;
+  bottom: 20px;
+  right: -4px;
+  font-size: 18px;
+  font-weight: 600;
+  color: $charcoal-grey;
+}
+
+.focus-time__current-minutes {
+  position: absolute;
+  color: $charcoal-grey;
+  font-size: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 80px;
+}
+
+.focus-time__minutes-label {
+  color: $steel;
+  position: absolute;
+  font-size: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 60px;
+}

@@ -1,0 +1,43 @@
+.topbar {
+  position: relative;
+  background-color: white;
+  color: $slate;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  transition: box-shadow 0.3s;
+
+  &--shadow {
+    z-index: 100;
+    box-shadow:  0 0 7px 2px rgba(91, 106, 125, 0.3);
+  }
+}
+
+.topbar__title {
+  position: absolute;
+  padding: 25px 0 0 30px;
+  font-weight: 600;
+  font-size: $font-xl;
+  text-transform: uppercase;
+}
+
+.topbar__dropdown {
+  z-index: 5;
+  position: absolute;
+  right: 30px;
+  top: 13px;
+}
+
+.topbar__navigation {
+  height: $topbar-navigation-height;
+}
+
+.topbar__badge {
+  position: absolute;
+    right: 0;
+    top: 0;
+    padding: 25px 30px 0 0;
+    font-weight: 600;
+    color: $dark-sky-blue;
+    text-transform: uppercase;
+}

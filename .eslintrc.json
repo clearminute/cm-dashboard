@@ -1,0 +1,45 @@
+{
+  "extends": ["airbnb-base", "plugin:react/recommended"],
+  "plugins": ["react", "import"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "settings": {
+    "import/resolver": "webpack"
+  },
+  "rules": {
+    "indent": "off", // prettier handles auto-indentation
+    "func-names": [1, "as-needed"],
+    "no-mixed-operators": 0,
+    "arrow-parens": 0,
+    "consistent-return": 0,
+    "no-unused-vars": [
+      "error",
+      {
+        "vars": "all",
+        "args": "none",
+        "ignoreRestSiblings": false
+      }
+    ],
+    "import/first": [
+      "error",
+      {
+        "absolute-first": false
+      }
+    ],
+    "react/prefer-stateless-function": [0],
+    "import/prefer-default-export": [0],
+    "class-methods-use-this": [0],
+    "max-len": ["error", 120],
+    "import/no-extraneous-dependencies": [0],
+    "no-param-reassign": [0],
+    "react/no-deprecated": [0],
+    "import/no-duplicates": [0]
+  },
+  "env": {
+    "jest": true,
+    "browser": true
+  }
+}

@@ -1,0 +1,66 @@
+$activities-header-border-color: #E6E6E6;
+
+.hourly-info__header {
+  display: flex;
+}
+
+.hourly-info__header__title {
+  flex: 1 0 auto;
+}
+
+.hourly-info__activities {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 40px;
+  font-size: 16px;
+  color: $slate;
+  align-items: center;
+  line-height: 2;
+  flex-direction: column;
+}
+
+.hourly-info__activities__header {
+  text-transform: uppercase;
+  text-align: center;
+  color: $slate;
+  border-bottom: 1px solid $activities-header-border-color;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+}
+
+.hourly-info__activities__body:empty {
+  margin: 0 auto;
+  width: 370px;
+  height: 140px;
+
+  background-image:
+    linear-gradient( 100deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 80% ),
+    linear-gradient( $pale-grey 400px, transparent 0 ),
+    linear-gradient( $pale-grey 400px, transparent 0 ),
+    linear-gradient( $pale-grey 400px, transparent 0 );
+
+  background-repeat: no-repeat;
+
+  background-size:
+    10px 140px, /* highlight */
+    370px 20px,
+    370px 20px,
+    370px 20px;
+
+  background-position:
+    0 0, /* highlight */
+    0 0,
+    0 30px,
+    0 60px;
+
+  animation: shine-top3-bars 1s infinite;
+}
+
+.hourly-info__activities__row {
+  display: flex;
+  flex-flow: row;
+}
+
+.hourly-info__activities__title {
+  flex: 1 0 auto;
+}

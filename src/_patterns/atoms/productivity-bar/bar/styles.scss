@@ -1,0 +1,78 @@
+.bar {
+  margin: 0 5px;
+  overflow: hidden;
+  height: 140px;
+
+  &:hover {
+    background-color: $pale-grey;
+  }
+}
+
+.bar__label-bottom {
+  position: absolute;
+  bottom: -30px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: $steel;
+}
+
+.bar__items {
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+}
+
+.bar--clickable {
+  cursor: pointer;
+}
+
+.bar__item--productive {
+  background: $productive-color;
+  border-radius: 3px 3px 0 0;
+  min-height: 3px;
+
+  &.black-white {
+    background: $steel;
+  }
+}
+
+.bar__item--slightlyProductive {
+  background: $slightly-productive-color;
+
+  &.black-white {
+    background: $link-water;
+  }
+}
+
+.bar__item--distracting {
+  background: $distracting-color;
+
+  &.black-white {
+    background: $steel;
+  }
+}
+
+.bar__item--slightlyDistracting {
+  background: $slightly-distracting-color;
+
+  &.black-white {
+    background: $link-water;
+  }
+}
+
+.bar__item--neutral {
+  background: $neutral-color-light;
+
+  &.black-white {
+    background: $pale-grey;
+  }
+}
+
+.bar__label-top {
+  position: absolute;
+  bottom: 150px;
+  font-size: 12px;
+  color: $steel;
+  text-align: center;
+}

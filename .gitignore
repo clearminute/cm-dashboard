@@ -1,0 +1,13 @@
+# Logs
+*.log
+
+# Dependency directory
+node_modules
+
+# IDE
+.idea/
+
+.DS_Store
+
+build/
+build/index.html

@@ -1,0 +1,7 @@
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g stroke="#FFFFFF" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+    <circle id="Oval" cx="11" cy="11" r="10"></circle>
+    <path d="M1,11 L21,11" id="Shape"></path>
+    <path d="M11,1 C13.5012804,3.73835289 14.9227528,7.29203385 15,11 C14.9227528,14.7079661 13.5012804,18.2616471 11,21 C8.49871962,18.2616471 7.07724724,14.7079661 7,11 C7.07724724,7.29203385 8.49871962,3.73835289 11,1 L11,1 Z" id="Shape"></path>
+  </g>
+</svg>

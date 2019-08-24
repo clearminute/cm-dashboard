@@ -1,0 +1,31 @@
+.switch {
+  border: solid 1px #D5D5D5;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding-left: 3px;
+  padding-right: 3px;
+  width: 50px;
+  height: 30px;
+  border-radius: 20px;
+  transition: background-color 0.2s;
+  will-change: background-color;
+
+  &--active {
+    background-color: $slate;
+  }
+}
+
+.switch__circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  background-color: #E6E6E6;
+  transition: transform 0.2s, background-color 0.2s;
+  will-change: translateX, background-color;
+
+  &--active {
+    background-color: white;
+    transform: translateX(25px);
+  }
+}

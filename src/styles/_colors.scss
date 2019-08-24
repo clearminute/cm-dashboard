@@ -1,0 +1,21 @@
+// Core colors:
+$light-blue-white: #e1e9f1;
+$charcoal-grey: #2b3039;
+$dark-charcoal-grey: #1d2027;
+$windows-blue: #3473c6;
+$dark-sky-blue: #3C81DE;
+$pale-grey: #f5f6fa;
+$link-water: #cad0d7;
+$cadet: #95A4B3;
+$steel: #818995;
+$slate: #5b6a7d;
+$faded-orange: #ef6765;
+$alert-yellow: #FFE276;
+
+// Derived colors:
+$productive-color: $dark-sky-blue;
+$distracting-color: $faded-orange;
+$neutral-color-dark: $steel;
+$neutral-color-light: $pale-grey;
+$slightly-distracting-color: lighten($distracting-color, 15%);
+$slightly-productive-color: lighten($productive-color, 15%);

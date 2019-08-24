@@ -1,0 +1,7 @@
+<svg width="22px" height="24px" viewBox="0 0 22 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g stroke="#FFFFFF" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M11.89,1.45 L19.89,5.45 C20.5696577,5.78773001 20.9995973,6.48105603 21,7.24 L21,16.77 C20.9995973,17.528944 20.5696577,18.22227 19.89,18.56 L11.89,22.56 C11.3266321,22.8419095 10.6633679,22.8419095 10.1,22.56 L2.1,18.56 C1.42099241,18.2178689 0.994708664,17.5203137 1,16.76 L1,7.24 C1.00040273,6.48105603 1.43034232,5.78773001 2.11,5.45 L10.11,1.45 C10.6706326,1.17141485 11.3293674,1.17141485 11.89,1.45 Z" id="Shape"></path>
+    <polyline id="Shape" points="1.32 6.16 11 11 20.68 6.16"></polyline>
+    <path d="M11,22.76 L11,11" id="Shape"></path>
+  </g>
+</svg>

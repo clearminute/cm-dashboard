@@ -1,0 +1,18 @@
+$content-background-gradient-start: #f4f6f9;
+$content-background-gradient-end: #F0F2F7;
+
+
+.app__body {
+  position: absolute;
+  left: $navigation-width;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, $content-background-gradient-start, $content-background-gradient-end);
+}
+
+.app__support-button {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}

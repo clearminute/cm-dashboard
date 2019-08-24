@@ -1,0 +1,68 @@
+.dropdown {
+  text-transform: uppercase;
+  max-height: 46px;
+  background-color: white;
+  /* prevents glitches when opening the dropdown
+    this will obviously work only on white background
+    but that's our use case for now
+  */
+  overflow: hidden;
+  transition: max-height 0.2s cubic-bezier(0, 1, 0, 1);
+
+  &--open {
+    background-color: white;
+    max-height: 600px;
+    border: 1px solid $link-water;
+    transition: max-height 0.3s ease-in-out;
+  }
+}
+
+.dropdown__option {
+  align-items: center;
+  color: $steel;
+  cursor: pointer;
+  display: flex;
+  flex-flow: row-reverse;
+  font-size: 16px;
+  height: 34px;
+  letter-spacing: 0.4px;
+  padding: $margin-s $margin-xxl;
+  text-align: right;
+
+  &:hover {
+    background-color: #F4F6F9;
+  }
+
+  &:first-child {
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: $margin-s;
+
+    &:hover {
+      background-color: inherit;
+    }
+
+    &:before {
+      border: 6px solid transparent;
+      border-top-color: $slate;
+      content: '';
+      position: absolute;
+      right: 21px;
+      top: 20px;
+    }
+  }
+
+  &--open {
+    &:first-child {
+      &:before {
+        transform: rotate(180deg);
+        top: 12px;
+      }
+    }
+  }
+
+  &--active {
+    color: $dark-sky-blue;
+    font-weight: 600;
+  }
+}
